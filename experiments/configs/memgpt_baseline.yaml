@@ -1,0 +1,25 @@
+# MemGPT Baseline 配置
+# 超参数不进代码，统一由此文件管理
+
+experiment:
+  name: memgpt_paper_repro
+  seed: 42
+
+model:
+  handle: "openai/gpt-4o-mini"
+  embedding: "openai/text-embedding-3-small"
+  temperature: 0.7
+  top_p: 1.0
+  max_tokens: 4096
+
+memory_blocks:
+  persona: "我是文档分析助手，擅长从长文档中提取要点。"
+  human: "用户正在做 MemGPT 研究复现。"
+
+prompt:
+  system: "你是文档分析助手。请用一句话介绍自己。"
+  user: "你好，请介绍一下你自己"
+
+data:
+  path: "experiments/data/memgpt_benchmark/qa_data_train.jsonl"
+  split: "test"

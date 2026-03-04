@@ -8,6 +8,9 @@ openapi_openai.json
 CLAUDE.md
 AGENTS.md
 
+# Experiments (MemGPT 复现)
+experiments/.env
+
 ### Eclipse ###
 .metadata
 bin/
